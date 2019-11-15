@@ -1,3 +1,4 @@
+
 name: Python application
 
 on: [push]
@@ -28,7 +29,8 @@ jobs:
       run: |
         pip install pytest
         pytest
-- uses: azure/webapps-deploy@v1
-  with:
-      app-name:  James-theCatSaidNo
-      publish-profile: ${{ secrets.LAB_PUBLISH_PROFILE }}
+    - uses: azure/webapps-deploy@v1
+      with:
+        app-name:  James-theCatSaidNo
+        publish-profile: ${{ secrets.LAB_PUBLISH_PROFILE }}
+
